@@ -1,0 +1,21 @@
+#%RAML 1.0
+title: company
+/employees:
+  get:
+    description: Fetch employee on basis of empID
+    queryParameters:
+      empID:
+        type: number
+        required: true
+        example: 001
+    responses:
+      200:
+        body:
+         application/json:
+           example:
+             {
+               empID: 101,
+               empName: "Raju",
+               empAge: 23,
+               empType: "contract"
+             }                
